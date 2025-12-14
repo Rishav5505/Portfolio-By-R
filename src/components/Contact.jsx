@@ -15,9 +15,9 @@ export default function Contact() {
   // EmailJS Configuration
   // IMPORTANT: Replace these with your actual EmailJS credentials
   // Get them from: https://www.emailjs.com/
-  const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Replace with your service ID
-  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace with your template ID
-  const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Replace with your public key
+  const EMAILJS_SERVICE_ID = 'service_oco5t5d'; // Updated from your screenshot
+  const EMAILJS_TEMPLATE_ID = 'template_ku0wvsp'; // Updated from your screenshot
+  const EMAILJS_PUBLIC_KEY = 'Maks5KeRsQ-u9sMfv'; // Updated from your screenshot
 
   const contactInfo = [
     {
@@ -112,11 +112,12 @@ export default function Contact() {
     } catch (error) {
       console.error('EmailJS Error:', error);
       setFormStatus('error');
+      setFormData(prev => ({ ...prev, lastError: error.text || error.message || JSON.stringify(error) }));
 
       // Fallback to Google Form
       setTimeout(() => {
         window.open('https://forms.gle/PY15yq5JVvo2TS5H9', '_blank');
-      }, 2000);
+      }, 4000);
     } finally {
       setIsSubmitting(false);
     }
@@ -239,7 +240,8 @@ export default function Contact() {
             )}
             {formStatus === 'error' && (
               <div className="form-message error">
-                ❌ Failed to send. Redirecting to Google Form...
+                ❌ Failed to send. Error: {formData.lastError || 'Unknown error'}.
+                <br />Redirecting to Google Form...
               </div>
             )}
           </form>

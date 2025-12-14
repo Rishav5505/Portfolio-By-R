@@ -72,8 +72,13 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-image">
-          <img src={profileImg} alt="Vinay profile" />
+        <div className="hero-spline-container">
+          <div className="spline-wrapper">
+            <spline-viewer loading-anim-type="spinner-small-light" url="https://prod.spline.design/X6EboTsFgHQyYf4Y/scene.splinecode"></spline-viewer>
+          </div>
+          <div className="spline-hint">
+            <span>👆 Interact in 3D</span>
+          </div>
         </div>
       </div>
     </section>

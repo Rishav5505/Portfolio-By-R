@@ -29,7 +29,7 @@ export default function Header() {
   const handleThemeChange = (newTheme) => {
     setTheme(newTheme);
     localStorage.setItem('site-theme', newTheme);
-    document.documentElement.classList.remove('light-theme', 'dark-theme', 'blue-theme', 'purple-theme', 'green-theme');
+    document.documentElement.classList.remove('light-theme', 'dark-theme');
     if (newTheme !== 'light') {
       document.documentElement.classList.add(newTheme + '-theme');
     }
@@ -102,9 +102,6 @@ export default function Header() {
           >
             <option value="light">Light</option>
             <option value="dark">Dark</option>
-            <option value="blue">Blue</option>
-            <option value="purple">Purple</option>
-            <option value="green">Green</option>
           </select>
         </div>
       </div>

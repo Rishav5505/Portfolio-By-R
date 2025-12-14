@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import AIBackground from './components/AIBackground';
 import Hero from './components/Hero';
+import ScrollShowcase from './components/ScrollShowcase';
 import ImageCarousel from './components/ImageCarousel';
 import About from './components/About';
 import Resume from './components/Resume';
@@ -65,6 +66,7 @@ export default function App() {
       <div className="page-wrapper">
         <main className="content">
           <Hero />
+          <ScrollShowcase />
           <ImageCarousel />
           <About />
           <Resume />
