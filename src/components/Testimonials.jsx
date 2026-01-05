@@ -7,7 +7,7 @@ export default function Testimonials() {
   const [hardSolved, setHardSolved] = useState('--');
   const [progressPercent, setProgressPercent] = useState(0);
 
-  const LEETCODE_USERNAME = 'V17inay27';
+  const LEETCODE_USERNAME = 'rishavkumar';
 
   useEffect(() => {
     fetchLeetCodeStats();
@@ -36,20 +36,20 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="section testimonials">
       <header className="section-header">
-        <h2>TESTIMONIALS & ACHIEVEMENTS</h2>
+        <h2>TESTIMONIALS & STATS</h2>
       </header>
 
       <div className="testimonials-grid">
         <div className="testimonial-card">
           <p className="quote">
-            "Vinay quickly understood our requirements and translated them into a working prototype with clean code and clear documentation."
+            "Rishav quickly understood our requirements and translated them into a working prototype with clean code and clear documentation."
           </p>
           <p className="author">— Mentor, University Project</p>
         </div>
 
         <div className="testimonial-card">
           <p className="quote">
-            "His ability to experiment with new AI tools and still keep the system stable and explainable is impressive."
+            "His ability to architect complex MERN systems while keeping the frontend highly performant and intuitive is impressive."
           </p>
           <p className="author">— Internship Supervisor</p>
         </div>
@@ -58,7 +58,7 @@ export default function Testimonials() {
         <div className="achievement-card github-stats-card">
           <div className="achievement-header">
             <h3 className="achievement-title">GitHub Stats</h3>
-            <a href="https://github.com/Vinay1727" target="_blank" rel="noopener noreferrer" className="achievement-link">
+            <a href="https://github.com/Rishav5505" target="_blank" rel="noopener noreferrer" className="achievement-link">
               View Profile →
             </a>
           </div>

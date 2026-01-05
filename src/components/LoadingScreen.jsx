@@ -27,12 +27,12 @@ export default function LoadingScreen() {
             <div className="loading-content">
                 <div className="loading-logo">
                     <div className="logo-circle">
-                        <span className="logo-letter">V</span>
+                        <span className="logo-letter">R</span>
                     </div>
                 </div>
 
-                <h2 className="loading-title">VINAY BADNORIYA</h2>
-                <p className="loading-subtitle">AI & ML Engineer</p>
+                <h2 className="loading-title">RISHAV KUMAR</h2>
+                <p className="loading-subtitle">Full Stack Developer</p>
 
                 <div className="loading-bar-container">
                     <div

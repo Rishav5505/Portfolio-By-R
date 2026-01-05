@@ -23,9 +23,16 @@ export default function Contact() {
     {
       icon: '📧',
       title: 'Email',
-      value: 'vvinaybadnoriya@gmail.com',
-      link: 'mailto:vvinaybadnoriya@gmail.com',
+      value: 'rishavkumar33372@gmail.com',
+      link: 'mailto:rishavkumar33372@gmail.com',
       color: '#00ffff'
+    },
+    {
+      icon: '📞',
+      title: 'Phone',
+      value: '+91 9508287609',
+      link: 'tel:+919508287609',
+      color: '#00ff00'
     },
     {
       icon: '📍',
@@ -38,14 +45,14 @@ export default function Contact() {
       icon: '💼',
       title: 'LinkedIn',
       value: 'Connect with me',
-      link: 'https://linkedin.com/in/viinay-badnoriiya',
+      link: 'https://linkedin.com/in/rishav-kumar-',
       color: '#0077b5'
     },
     {
       icon: '💻',
       title: 'GitHub',
-      value: '@Vinay1727',
-      link: 'https://github.com/Vinay1727',
+      value: '@Rishav5505',
+      link: 'https://github.com/Rishav5505',
       color: '#333'
     }
   ];
@@ -54,19 +61,19 @@ export default function Contact() {
     {
       name: 'LinkedIn',
       icon: '💼',
-      url: 'https://linkedin.com/in/viinay-badnoriiya',
+      url: 'https://linkedin.com/in/rishav-kumar-',
       color: '#0077b5'
     },
     {
       name: 'GitHub',
       icon: '💻',
-      url: 'https://github.com/Vinay1727',
+      url: 'https://github.com/Rishav5505',
       color: '#333'
     },
     {
       name: 'Email',
       icon: '📧',
-      url: 'mailto:vvinaybadnoriya@gmail.com',
+      url: 'mailto:contact@rishavkumar.me',
       color: '#00ffff'
     },
     {

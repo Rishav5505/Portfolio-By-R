@@ -4,11 +4,11 @@ import './App.css';
 import Header from './components/Header';
 import AIBackground from './components/AIBackground';
 import Hero from './components/Hero';
-import ScrollShowcase from './components/ScrollShowcase';
 import ImageCarousel from './components/ImageCarousel';
 import About from './components/About';
 import Resume from './components/Resume';
 import ResumeDownload from './components/ResumeDownload';
+import Certifications from './components/Certifications';
 import Portfolio from './components/Portfolio';
 import GitHub from './components/GitHub';
 import Testimonials from './components/Testimonials';
@@ -21,6 +21,9 @@ import ParticlesAnimation from './components/ParticlesAnimation';
 import AnimatedShapes from './components/AnimatedShapes';
 import VideoShowcase from './components/VideoShowcase';
 import ScrollRobot from './components/ScrollRobot';
+import ExperienceTimeline from './components/ExperienceTimeline';
+import SocialDock from './components/SocialDock';
+import Skills from './components/Skills';
 
 export default function App() {
   useEffect(() => {
@@ -47,6 +50,8 @@ export default function App() {
 
   return (
     <>
+      <SocialDock />
+
       {/* Loading Screen */}
       <LoadingScreen />
 
@@ -66,15 +71,16 @@ export default function App() {
       <div className="page-wrapper">
         <main className="content">
           <Hero />
-          <ScrollShowcase />
           <ImageCarousel />
           <About />
+          <Skills />
+          <ExperienceTimeline />
           <Resume />
           <ResumeDownload />
+          <Certifications />
           <Portfolio />
           <VideoShowcase />
           <GitHub />
-          <Testimonials />
           <PortfolioMarquee />
           <Contact />
         </main>

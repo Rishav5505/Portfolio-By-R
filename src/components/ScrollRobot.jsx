@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ScrollRobot() {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [scrollDirection, setScrollDirection] = useState('idle');
     const [scrollSpeed, setScrollSpeed] = useState(0);
-    const [robotMood, setRobotMood] = useState('happy');
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -19,39 +19,23 @@ export default function ScrollRobot() {
             const scrollDiff = Math.abs(currentScrollY - lastScrollY);
             const speed = scrollDiff / timeDiff;
 
-            // Show robot after scrolling 100px
             setIsVisible(currentScrollY > 100);
 
-            // Calculate scroll percentage (0-100)
             const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
             const scrollPercent = (currentScrollY / maxScroll) * 100;
             setScrollPosition(scrollPercent);
 
-            // Determine direction
             if (currentScrollY > lastScrollY) {
                 setScrollDirection('down');
             } else if (currentScrollY < lastScrollY) {
                 setScrollDirection('up');
             }
 
-            // Set speed
             setScrollSpeed(speed);
-
-            // Determine mood based on speed and position
-            if (speed > 2) {
-                setRobotMood('excited');
-            } else if (scrollPercent > 90) {
-                setRobotMood('tired');
-            } else if (scrollPercent < 10) {
-                setRobotMood('happy');
-            } else {
-                setRobotMood('normal');
-            }
 
             lastScrollY = currentScrollY;
             lastTime = currentTime;
 
-            // Reset to idle after 200ms of no scrolling
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(() => {
                 setScrollDirection('idle');
@@ -66,87 +50,78 @@ export default function ScrollRobot() {
         };
     }, []);
 
-    // Robot expressions based on state
-    const getRobotExpression = () => {
-        if (scrollSpeed > 2) {
-            return scrollDirection === 'down' ? '😵' : '🤪';
-        }
-        if (robotMood === 'excited') return '😃';
-        if (robotMood === 'tired') return '😴';
-        if (robotMood === 'happy') return '😊';
-        return '🤖';
-    };
-
-    // Robot body animation class
-    const getRobotAnimation = () => {
-        if (scrollSpeed > 2) return 'robot-shaking';
-        if (scrollDirection === 'down') return 'robot-moving-down';
-        if (scrollDirection === 'up') return 'robot-moving-up';
-        return 'robot-idle';
-    };
-
-    // Robot vertical position based on scroll
-    const getRobotPosition = () => {
-        return `${Math.min(scrollPosition, 85)}%`;
+    const getRobotContent = () => {
+        if (scrollDirection === 'down') return '{...}';
+        if (scrollDirection === 'up') return '</>';
+        return 'JS';
     };
 
     if (!isVisible) return null;
 
     return (
-        <div className="scroll-robot-container">
-            {/* Robot */}
-            <div
-                className={`scroll-robot ${getRobotAnimation()}`}
-                style={{ top: getRobotPosition() }}
-            >
-                {/* Robot Head */}
-                <div className="robot-head">
-                    <div className="robot-antenna">
-                        <div className="antenna-ball"></div>
-                    </div>
-                    <div className="robot-face">
-                        <div className="robot-eyes">
-                            <div className={`robot-eye ${scrollDirection === 'up' ? 'eye-up' : scrollDirection === 'down' ? 'eye-down' : ''}`}></div>
-                            <div className={`robot-eye ${scrollDirection === 'up' ? 'eye-up' : scrollDirection === 'down' ? 'eye-down' : ''}`}></div>
-                        </div>
-                        <div className="robot-mouth">
-                            {getRobotExpression()}
-                        </div>
-                    </div>
-                </div>
-
-                {/* Robot Body */}
-                <div className="robot-body">
-                    <div className="robot-panel">
-                        <div className={`robot-light ${scrollDirection !== 'idle' ? 'light-active' : ''}`}></div>
-                        <div className="robot-screen">
-                            <span className="scroll-percent">{Math.round(scrollPosition)}%</span>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Robot Arms */}
-                <div className={`robot-arm robot-arm-left ${scrollDirection === 'down' ? 'arm-down' : 'arm-up'}`}></div>
-                <div className={`robot-arm robot-arm-right ${scrollDirection === 'down' ? 'arm-down' : 'arm-up'}`}></div>
-
-                {/* Robot Legs */}
-                <div className="robot-legs">
-                    <div className={`robot-leg ${scrollDirection !== 'idle' ? 'leg-moving' : ''}`}></div>
-                    <div className={`robot-leg ${scrollDirection !== 'idle' ? 'leg-moving leg-delay' : ''}`}></div>
-                </div>
-
-                {/* Speech Bubble */}
-                {scrollSpeed > 2 && (
-                    <div className="robot-speech">
-                        {scrollDirection === 'down' ? 'Wheee! 🚀' : 'Wait up! ⬆️'}
-                    </div>
-                )}
-            </div>
-
+        <div className="fixed right-8 top-0 h-full w-12 pointer-events-none z-[1000] hidden lg:flex flex-col items-center">
             {/* Track Line */}
-            <div className="robot-track">
-                <div className="track-progress" style={{ height: `${scrollPosition}%` }}></div>
+            <div className="absolute top-0 bottom-0 w-[2px] bg-slate-800/50 overflow-hidden">
+                <motion.div
+                    className="w-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]"
+                    style={{ height: `${scrollPosition}%` }}
+                />
             </div>
+
+            {/* Tech Bot */}
+            <motion.div
+                className="absolute pointer-events-auto cursor-pointer"
+                animate={{
+                    top: `${Math.min(scrollPosition, 92)}%`,
+                    rotate: scrollDirection === 'down' ? 10 : scrollDirection === 'up' ? -10 : 0
+                }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            >
+                <div className="relative group">
+                    {/* Bot Body (Terminal Style) */}
+                    <div className="w-14 h-14 bg-slate-900 border-2 border-cyan-500/50 rounded-xl flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(6,182,212,0.2)] group-hover:border-cyan-400 transition-colors backdrop-blur-md">
+                        {/* Matrix Grid Effect Background */}
+                        <div className="absolute inset-0 opacity-10 pointer-events-none">
+                            <div className="w-full h-full bg-[linear-gradient(rgba(0,255,157,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,157,0.1)_1px,transparent_1px)] bg-[size:4px_4px]"></div>
+                        </div>
+
+                        {/* Content */}
+                        <span className="text-[10px] font-black font-mono text-cyan-400 tracking-tighter">
+                            {getRobotContent()}
+                        </span>
+
+                        {/* Scanner Light */}
+                        <motion.div
+                            className="absolute top-0 left-0 w-full h-[1px] bg-cyan-400/50 opacity-50"
+                            animate={{ top: ['0%', '100%', '0%'] }}
+                            transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+                        />
+                    </div>
+
+                    {/* Glowing Particles */}
+                    <div className="absolute -inset-2 bg-cyan-500/10 blur-xl rounded-full -z-10 group-hover:bg-cyan-500/20"></div>
+
+                    {/* Speech Bubble / Code Snippet */}
+                    <AnimatePresence>
+                        {scrollSpeed > 0.5 && (
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: -90 }}
+                                exit={{ opacity: 0, x: 20 }}
+                                className="absolute top-0 right-full mr-4 px-3 py-1 bg-black/80 border border-cyan-500/30 rounded-lg backdrop-blur-md shadow-[0_0_15px_rgba(6,182,212,0.2)]"
+                            >
+                                <span className="text-[10px] text-cyan-400 font-mono whitespace-nowrap">
+                                    {scrollDirection === 'down' ? (
+                                        ['npm_run_dev', 'git_push...', 'indexing...', 'fetching_stats'][Math.floor(Date.now() / 1000) % 4]
+                                    ) : (
+                                        ['cd_top/..', 'reloading...', 'scroll_up()', 'parsing_header'][Math.floor(Date.now() / 1000) % 4]
+                                    )}
+                                </span>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+            </motion.div>
         </div>
     );
 }

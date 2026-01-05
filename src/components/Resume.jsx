@@ -6,34 +6,34 @@ export default function Resume() {
     {
       id: 1,
       title: "Education",
-      heading: "B.Tech in Computer Science – AI & ML",
-      meta: "K.R. Mangalam University · 2022 – 2026",
+      heading: "B.Tech in Computer Science & Engineering",
+      meta: "K. R. Mangalam University · 2022 – 2026",
       content:
-        "Specialization in AI & Machine Learning. CGPA: 7.05. Coursework includes Data Science with Python, Big Data Analytics, DL, and Statistics with Python.",
+        "Specialization in Full Stack Development. Gaining expertise in software architecture, enterprise technologies, and end-to-end application development.",
     },
     {
       id: 2,
-      title: "Certifications",
-      heading: "Professional Certifications",
-      meta: "IBM · Samatrix",
+      title: "Secondary Education",
+      heading: "Senior Secondary (PCM)",
+      meta: "Sir Ganesh Dutt Inter Memorial College · 2022",
       content:
-        "Python 101 for Data Science, Statistics Using Python, Data Analysis with Python, Data Visualization, Big Data Engineer.",
+        "Completed higher secondary education with a focus on Physics, Chemistry, and Mathematics.",
     },
     {
       id: 3,
-      title: "Experience",
-      heading: "Data Science & Analytics Intern",
-      meta: "Zidio Development · May 2025 – Aug 2025",
+      title: "Work Experience",
+      heading: "Full Stack Developer (Scrum Master)",
+      meta: "Xcelerate - Live Project | Xebia · Mar 2025 – Present",
       content:
-        "Worked on data collection, cleaning, and EDA. Assisted with predictive ML models for business insights.",
+        "Leading Agile ceremonies and project delivery. Developed a high-performance survey application using React Native, Node.js, and MongoDB. Ensuring sprint goals through CI/CD practices.",
     },
     {
       id: 4,
-      title: "Technical Skills",
-      heading: "Skills & Tools",
-      meta: "Full Stack",
+      title: "Internship",
+      heading: "Full Stack Development Intern",
+      meta: "Xebia IT Architects Pvt Ltd · June 2025 – July 2025",
       content:
-        "Python, R, SQL, Pandas, NumPy, Scikit-learn, TensorFlow, Matplotlib, Power BI, Flask, Git, VS Code.",
+        "Building and debugging scalable web applications in a professional environment. Collaborated with teams to improve application performance and user experience using MERN stack.",
     },
   ];
 

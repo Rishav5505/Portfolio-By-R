@@ -6,7 +6,7 @@ export default function GitHub() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const GITHUB_USERNAME = 'Vinay1727';
+  const GITHUB_USERNAME = 'Rishav5505';
 
   useEffect(() => {
     fetchGitHubRepos();

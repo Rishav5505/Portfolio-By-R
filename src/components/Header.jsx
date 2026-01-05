@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
-import profileImg from '../assets/Copy.jpg';
+import profileImg from '../assets/rishav_profile.jpg';
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -8,13 +8,16 @@ export default function Header() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
 
   const roles = [
-    'AI & ML Engineer',
-    'Data Scientist',
-    'Computer Vision Engineer',
-    'Robotics Engineer',
-    'Project Manager',
-    'Python Developer',
-    'ML Researcher'
+    'Aspiring Full Stack Developer',
+    'Mobile App Specialist (React Native)',
+    'Website QA & Testing Engineer',
+    'MERN Stack Specialty',
+    'React Native Developer',
+    'Scrum Master',
+    'Agile Practitioner',
+    'JavaScript / TypeScript Developer',
+    'Node.js Backend Engineer',
+    'UI/UX Designer (Figma)'
   ];
 
   // Auto-scroll roles
@@ -63,7 +66,7 @@ export default function Header() {
         <div className="header-profile">
           <img src={profileImg} alt="Profile" className="header-profile-img" />
           <div className="header-info">
-            <h1 className="header-name">VINAY BADNORIYA</h1>
+            <h1 className="header-name">RISHAV KUMAR</h1>
             <div className="header-role-container">
               <p className="header-role header-role-animated" key={currentRoleIndex}>
                 {roles[currentRoleIndex]}
@@ -88,7 +91,7 @@ export default function Header() {
           <a href="#resume" className="nav-link" onClick={handleNavClick}>Resume</a>
           <a href="#portfolio" className="nav-link" onClick={handleNavClick}>Portfolio</a>
           <a href="#github" className="nav-link" onClick={handleNavClick}>GitHub</a>
-          <a href="#testimonials" className="nav-link" onClick={handleNavClick}>Testimonials</a>
+          <a href="#video-showcase" className="nav-link" onClick={handleNavClick}>Pro Demos</a>
           <a href="#contact" className="nav-link" onClick={handleNavClick}>Contact</a>
         </nav>
 

@@ -4,31 +4,31 @@ export default function Portfolio() {
   const portfolioCards = [
     {
       id: 1,
-      title: "Smart AI Desktop Assistant",
-      tags: "Python · Voice Control · Automation",
+      title: "Mind Mend: Teletherapy Platform",
+      tags: "MERN Stack · Socket.IO · Jitsi",
       description:
-        "Created a voice-controlled desktop assistant using Python and SpeechRecognition to perform 10+ automation tasks, reducing user effort by 70%. Implemented secure JSON-based login system and voice-trigger wakeup with OOP principles.",
+        "A comprehensive teletherapy platform featuring secure authentication, therapy booking, mood tracking, and AI-driven insights. Integrated real-time community support and resources.",
     },
     {
       id: 2,
-      title: "Cat & Dog Image Classification (CNN)",
-      tags: "Deep Learning · Keras · Computer Vision",
+      title: "Blockchain Health Record System",
+      tags: "Ethereum · Solidity · Web3.js",
       description:
-        "Designed and trained a CNN using Keras on 25,000+ labeled images, achieving 87% validation accuracy. Employed real-time data augmentation and dropout to reduce overfitting by 40%, with user-friendly real-time prediction interface.",
+        "A decentralized medical record system utilizing Ethereum smart contracts for tamper-proof storage. Implemented patient-controlled access with full audit logging for doctors.",
     },
     {
       id: 3,
-      title: "Fake News Detection (NLP)",
-      tags: "NLP · XGBoost · Flask Deployment",
+      title: "Xcelerate: Survey Application",
+      tags: "React Native · Node.js · MongoDB",
       description:
-        "Developed a Flask-deployable NLP application using XGBoost, SVM, and TF-IDF vectorization on the LIAR dataset. Achieved 81% accuracy on 12,000+ preprocessed samples with a user-friendly web interface for real-time predictions.",
+        "A high-performance survey application developed under Xebia's Live Project. Optimized for mobile delivery with real-time data sync and Agile delivery management.",
     },
     {
       id: 4,
-      title: "Data Science & Analytics Projects",
-      tags: "EDA · ML Models · Pandas · NumPy",
+      title: "Agile Project Leadership",
+      tags: "CI/CD · Scrum · Team Lead",
       description:
-        "Completed end-to-end data science projects involving data collection, cleaning, exploratory data analysis (EDA), and building predictive ML models for business decision-making using Pandas, NumPy, and Scikit-learn.",
+        "Managed cross-functional teams using Scrum methodologies. Led Agile ceremonies and ensured high-quality project delivery through code reviews and automated testing.",
     },
   ];
 

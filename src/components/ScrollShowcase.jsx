@@ -9,7 +9,7 @@ import img3 from '../assets/portfolioo-img-3.jpg';
 import img4 from '../assets/portfolioo-img-4.jpg';
 import img5 from '../assets/portfolioo-img-5.jpg';
 import img6 from '../assets/portfolioo-img-6.jpg'; // Using img6 twice if needed or just 5
-import profileImg from '../assets/IMG_3823.JPG';
+import profileImg from '../assets/rishav_profile.jpg';
 
 const ScrollShowcase = () => {
     const targetRef = useRef(null);
@@ -26,8 +26,8 @@ const ScrollShowcase = () => {
 
                     {/* Section 1: Intro Title */}
                     <div className="scroll-item text-item">
-                        <h2 className="outline-text">VINAY</h2>
-                        <span className="subtitle">BADNORIYA</span>
+                        <h2 className="outline-text">RISHAV</h2>
+                        <span className="subtitle">KUMAR</span>
                     </div>
 
                     {/* Section 2: Image Card */}
@@ -35,7 +35,7 @@ const ScrollShowcase = () => {
                         <div className="image-card">
                             <img src={img1} alt="Project 1" />
                             <div className="card-overlay">
-                                <h3>AI Innovation</h3>
+                                <h3>Full Stack</h3>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ const ScrollShowcase = () => {
 
                     {/* Section 5: "VINAY" Branding (replacing KPV) */}
                     <div className="scroll-item brand-item">
-                        <h1 className="huge-text">VINAY</h1>
+                        <h1 className="huge-text">RISHAV</h1>
                     </div>
 
                     {/* Section 6: Image Card */}
@@ -79,7 +79,7 @@ const ScrollShowcase = () => {
                     {/* Section 9: Profile/Ending */}
                     <div className="scroll-item last-item">
                         <div className="profile-circle">
-                            <img src={profileImg} alt="Vinay" />
+                            <img src={profileImg} alt="Rishav" />
                         </div>
                         <h3>Let's Build</h3>
                     </div>
