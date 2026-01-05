@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import profileImg from '../assets/rishav_profile.jpg';
 import rishavResumePdf from '../assets/Rishav FSD.pdf';
+import cyberCoreImg from '../assets/cyber_core.png';
 
 export default function Hero() {
   const [typedText, setTypedText] = useState('');
@@ -154,7 +155,7 @@ export default function Hero() {
               transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
             >
               <img
-                src="/src/assets/cyber_core.png"
+                src={cyberCoreImg}
                 alt="Cyber Tech Core"
                 className="w-full h-full object-cover scale-110"
               />
@@ -200,14 +201,14 @@ export default function Hero() {
           ))}
 
           {/* Glowing Orbital Rings */}
-          <div className="absolute inset-x-0 inset-y-0 flex items-center justify-center pointer-events-none opacity-40">
+          <div className="absolute inset-x-0 inset-y-0 flex items-center justify-center pointer-events-none">
             <motion.div
-              className="w-[520px] h-[520px] border border-cyan-400/20 rounded-full"
+              className="w-[520px] h-[520px] border border-cyan-400/30 rounded-full"
               animate={{ rotate: 360 }}
               transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
             />
             <motion.div
-              className="absolute w-[440px] h-[440px] border border-indigo-400/20 rounded-full"
+              className="absolute w-[440px] h-[440px] border border-indigo-400/30 rounded-full"
               animate={{ rotate: -360 }}
               transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
             />
