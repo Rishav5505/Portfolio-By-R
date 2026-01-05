@@ -8,7 +8,8 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.png', 'icon-512.png', 'robots.txt'],
+      injectRegister: 'auto',
+      includeAssets: ['favicon.png', 'icon-512.png', 'icon-192.png', 'robots.txt'],
       manifest: {
         name: 'Rishav Kumar | Portfolio',
         short_name: 'RishavPort',
@@ -16,7 +17,15 @@ export default defineConfig({
         theme_color: '#03040c',
         background_color: '#03040c',
         display: 'standalone',
+        orientation: 'portrait',
+        scope: '/',
+        start_url: '/',
         icons: [
+          {
+            src: 'icon-192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
           {
             src: 'icon-512.png',
             sizes: '512x512',
