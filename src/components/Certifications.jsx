@@ -5,13 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Import Assets
 import photographyCert from '../assets/Photography_Certificate.jpg';
 import microsoftCert from '../assets/Microsoft_Ambassador.jpg';
-
-// PDFs served from public/pdfs
-const internshipCert = '/pdfs/Internship_Letter.pdf';
-const techOdysseyCert = '/pdfs/TechOdyssey_Certificate.pdf';
-const droneCert = '/pdfs/Drone_Certificate.pdf';
-const cert1 = '/pdfs/Certificate_1.pdf';
-const cert2 = '/pdfs/Certificate_2.pdf';
+import internshipCert from '../assets/pdfs/Internship_Letter.pdf';
+import techOdysseyCert from '../assets/pdfs/TechOdyssey_Certificate.pdf';
+import droneCert from '../assets/pdfs/Drone_Certificate.pdf';
+import cert1 from '../assets/pdfs/Certificate_1.pdf';
+import cert2 from '../assets/pdfs/Certificate_2.pdf';
 
 export default function Certifications() {
     const [selectedCert, setSelectedCert] = useState(null);

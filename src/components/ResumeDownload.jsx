@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import DigitalResumeView from "./DigitalResumeView";
 
-// PDFs are now served from /public/pdfs
-const rishavResumePdf = "/pdfs/Rishav_FSD.pdf";
-const rishavCsePdf = "/pdfs/Rishav_CSE.pdf";
-const hardCopyPdf = "/pdfs/HardCopy.pdf";
-const softCopyPdf = "/pdfs/SoftCopy.pdf";
+// PDFs
+import rishavResumePdf from "../assets/pdfs/Rishav_FSD.pdf";
+import rishavCsePdf from "../assets/pdfs/Rishav_CSE.pdf";
+import hardCopyPdf from "../assets/pdfs/HardCopy.pdf";
+import softCopyPdf from "../assets/pdfs/SoftCopy.pdf";
 
 export default function ResumeDownload() {
   const [selectedResume, setSelectedResume] = useState(null);
