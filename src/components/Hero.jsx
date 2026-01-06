@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import profileImg from '../assets/rishav_profile.jpg';
-import rishavResumePdf from '../assets/Rishav FSD.pdf';
+const rishavResumePdf = '/pdfs/Rishav_FSD.pdf';
 import cyberCoreImg from '../assets/cyber_core.png';
 
 export default function Hero() {
