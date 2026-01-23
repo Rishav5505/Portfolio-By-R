@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import DigitalResumeView from "./DigitalResumeView";
 
-// PDFs
-import rishavResumePdf from "../assets/pdfs/Rishav_FSD.pdf";
-import rishavCsePdf from "../assets/pdfs/Rishav_CSE.pdf";
-import hardCopyPdf from "../assets/pdfs/HardCopy.pdf";
-import softCopyPdf from "../assets/pdfs/SoftCopy.pdf";
+// PDFs - using absolute paths from public directory to ensure proper loading in iframes/new tabs
+const rishavResumePdf = `${import.meta.env.BASE_URL}assets/pdfs/Rishav_FSD.pdf`;
+const rishavCsePdf = `${import.meta.env.BASE_URL}assets/pdfs/Rishav_CSE.pdf`;
+const softCopyPdf = `${import.meta.env.BASE_URL}assets/pdfs/SoftCopy.pdf`;
 
 export default function ResumeDownload() {
   const [selectedResume, setSelectedResume] = useState(null);

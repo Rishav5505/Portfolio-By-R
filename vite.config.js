@@ -4,12 +4,13 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
-      includeAssets: ['favicon.png', 'icon-512.png', 'icon-192.png', 'robots.txt'],
+      includeAssets: ['favicon.png', 'icon-512.png', 'icon-192.png', 'robots.txt', 'assets/pdfs/*.pdf', 'assets/certs/*.jpg'],
       manifest: {
         name: 'Rishav Kumar | Portfolio',
         short_name: 'RishavPort',
@@ -33,6 +34,9 @@ export default defineConfig({
             purpose: 'any maskable'
           }
         ]
+      },
+      workbox: {
+        navigateFallbackDenylist: [/^\/assets\/pdfs\/.*/, /^\/assets\/certs\/.*/],
       }
     })
   ],

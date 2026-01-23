@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Import Assets
-// Import Assets
-import photographyCert from '../assets/Photography_Certificate.jpg';
-import microsoftCert from '../assets/Microsoft_Ambassador.jpg';
-import internshipCert from '../assets/pdfs/Internship_Letter.pdf';
-import techOdysseyCert from '../assets/pdfs/TechOdyssey_Certificate.pdf';
-import droneCert from '../assets/pdfs/Drone_Certificate.pdf';
-import cert1 from '../assets/pdfs/Certificate_1.pdf';
-import cert2 from '../assets/pdfs/Certificate_2.pdf';
+// Assets - using absolute paths from public directory
+const photographyCert = `${import.meta.env.BASE_URL}assets/certs/Photography_Certificate.jpg`;
+const microsoftCert = `${import.meta.env.BASE_URL}assets/certs/Microsoft_Ambassador.jpg`;
+const internshipCert = `${import.meta.env.BASE_URL}assets/pdfs/Internship_Letter.pdf`;
+const techOdysseyCert = `${import.meta.env.BASE_URL}assets/pdfs/TechOdyssey_Certificate.pdf`;
+const droneCert = `${import.meta.env.BASE_URL}assets/pdfs/Drone_Certificate.pdf`;
+const cert1 = `${import.meta.env.BASE_URL}assets/pdfs/Certificate_1.pdf`;
+const cert2 = `${import.meta.env.BASE_URL}assets/pdfs/Certificate_2.pdf`;
 
 export default function Certifications() {
     const [selectedCert, setSelectedCert] = useState(null);
