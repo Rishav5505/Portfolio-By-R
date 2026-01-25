@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import SectionHeader from "./SectionHeader";
 
 export default function Portfolio() {
   const portfolioCards = [
@@ -7,28 +8,42 @@ export default function Portfolio() {
       title: "Mind Mend: Teletherapy Platform",
       tags: "MERN Stack · Socket.IO · Jitsi",
       description:
-        "A comprehensive teletherapy platform featuring secure authentication, therapy booking, mood tracking, and AI-driven insights. Integrated real-time community support and resources.",
+        "A comprehensive teletherapy platform featuring secure authentication, therapy booking, mood tracking, and AI-driven insights.",
     },
     {
       id: 2,
-      title: "Blockchain Health Record System",
-      tags: "Ethereum · Solidity · Web3.js",
+      title: "Oasis ERP System",
+      tags: "React · Node.js · MongoDB",
       description:
-        "A decentralized medical record system utilizing Ethereum smart contracts for tamper-proof storage. Implemented patient-controlled access with full audit logging for doctors.",
+        "Advanced Educational Resource Planning system with multi-role dashboards, fee management, and student portals.",
     },
     {
       id: 3,
-      title: "Xcelerate: Survey Application",
-      tags: "React Native · Node.js · MongoDB",
+      title: "JalConnect: Water Systems",
+      tags: "IOT · MERN Stack · Real-time",
       description:
-        "A high-performance survey application developed under Xebia's Live Project. Optimized for mobile delivery with real-time data sync and Agile delivery management.",
+        "Smart water distribution system for monitoring tank levels and leak detection with automated alerts.",
     },
     {
       id: 4,
-      title: "Agile Project Leadership",
-      tags: "CI/CD · Scrum · Team Lead",
+      title: "Labour Chowk Admin",
+      tags: "React · Tailwind · Analytics",
       description:
-        "Managed cross-functional teams using Scrum methodologies. Led Agile ceremonies and ensured high-quality project delivery through code reviews and automated testing.",
+        "Enterprise grade administrative dashboard for managing workforce, job assignments, and real-time attendance.",
+    },
+    {
+      id: 5,
+      title: "Fresh Plant Nursery",
+      tags: "React · E-commerce · UI/UX",
+      description:
+        "Modern e-commerce platform for a plant nursery featuring glassmorphism design and seamless shopping experience.",
+    },
+    {
+      id: 6,
+      title: "Blockchain Health Records",
+      tags: "Ethereum · Solidity · Web3.js",
+      description:
+        "Decentralized medical record system utilizing smart contracts for secure and transparent storage.",
     },
   ];
 
@@ -132,14 +147,11 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <section id="portfolio" className="py-16">
-      <header className="text-center mb-8">
-        <h2 className="text-3xl font-bold mb-2">PORTFOLIO</h2>
-        <p className="text-slate-400">
-          Selected projects showcasing AI/ML, Data Science, and automation
-          expertise.
-        </p>
-      </header>
+    <section id="portfolio" className="py-24">
+      <SectionHeader
+        title={<>Featured <span className="text-cyan-400">Projects</span></>}
+        subtitle="Exploring the intersection of modern design and robust engineering."
+      />
 
       <div
         className="portfolio-cards-scroll overflow-hidden"

@@ -4,6 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Import Assets
 import therpyThumb from '../assets/Therpy_Web_Full.png';
 import oasisThumb from '../assets/Oasis_ERP_Full.png';
+import freshPlantThumb from '../assets/FreshPlant_Thumb.png';
+import jalConnectThumb from '../assets/JalConnect_Thumb.png';
+import labourChowkThumb from '../assets/LabourChowk_Thumb.png';
 
 export default function VideoShowcase() {
     const [activeVideo, setActiveVideo] = useState(null);
@@ -33,14 +36,36 @@ export default function VideoShowcase() {
         },
         {
             id: 3,
-            title: 'SecBot AI Security',
-            description: 'AI-powered network security scanner that identifies vulnerabilities and provides solutions.',
-            features: ['Nmap Integration', 'Threat Detection', 'AI Reports'],
-            thumbnail: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
-            videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder
-            liveUrl: '#',
-            category: 'Cybersecurity',
-            color: '#ff0055'
+            title: 'JalConnect: Water Systems',
+            description: 'Smart water distribution and management system for real-time monitoring of tank levels.',
+            features: ['IOT Dashboard', 'Real-time Stats', 'Leak Detection'],
+            thumbnail: jalConnectThumb,
+            videoUrl: '', // To be updated
+            liveUrl: 'https://water-distubution-system.vercel.app/',
+            category: 'Smart Utility',
+            color: '#0ea5e9'
+        },
+        {
+            id: 4,
+            title: 'Labour Chowk Admin',
+            description: 'Enterprise grade administrative dashboard for managing workforce and attendance tracking.',
+            features: ['Workforce Mgmt', 'Job Tracking', 'Analytics'],
+            thumbnail: labourChowkThumb,
+            videoUrl: '', // To be updated
+            liveUrl: 'https://dashbord-labour.vercel.app/',
+            category: 'Admin Dashboard',
+            color: '#3b82f6'
+        },
+        {
+            id: 5,
+            title: 'Fresh Plant Nursery',
+            description: 'A modern e-commerce platform for high-quality indoor and outdoor plants.',
+            features: ['E-commerce', 'Glassmorphism', 'Product Catalog'],
+            thumbnail: freshPlantThumb,
+            videoUrl: '', // To be updated
+            liveUrl: 'https://newplant-fresh.vercel.app/',
+            category: 'E-commerce',
+            color: '#22c55e'
         }
     ];
 

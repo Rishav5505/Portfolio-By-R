@@ -131,6 +131,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
+  cursor: none !important;
+}
+
+/* Hide cursor on interactive elements too */
+a,
+button,
+[role="button"],
+.resume-card,
+.portfolio-card {
+  cursor: none !important;
+}
+
+/* Noise Overlay Effect */
+.noise-overlay {
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  filter: contrast(170%) brightness(1000%);
 }
 
 /* AI Background Layer Styling */

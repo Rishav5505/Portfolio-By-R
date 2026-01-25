@@ -24,6 +24,7 @@ import ScrollRobot from './components/ScrollRobot';
 import ExperienceTimeline from './components/ExperienceTimeline';
 import SocialDock from './components/SocialDock';
 import Skills from './components/Skills';
+import CustomCursor from './components/CustomCursor';
 
 export default function App() {
   useEffect(() => {
@@ -50,6 +51,11 @@ export default function App() {
 
   return (
     <>
+      <CustomCursor />
+
+      {/* Noise Overlay for premium texture */}
+      <div className="noise-overlay pointer-events-none fixed inset-0 z-[9999] opacity-[0.03]"></div>
+
       <SocialDock />
 
       {/* Loading Screen */}
