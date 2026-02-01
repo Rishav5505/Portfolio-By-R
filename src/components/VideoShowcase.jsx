@@ -7,6 +7,7 @@ import oasisThumb from '../assets/Oasis_ERP_Full.png';
 import freshPlantThumb from '../assets/FreshPlant_Thumb.png';
 import jalConnectThumb from '../assets/JalConnect_Thumb.png';
 import labourChowkThumb from '../assets/LabourChowk_Thumb.png';
+import safarChaskaThumb from '../assets/SafarChaska_Thumb.png';
 
 export default function VideoShowcase() {
     const [activeVideo, setActiveVideo] = useState(null);
@@ -14,6 +15,17 @@ export default function VideoShowcase() {
     const projects = [
         {
             id: 1,
+            title: 'Safar Chaska: Himalayan Travel',
+            description: 'Premium travel platform for Himalayan adventures, handcrafted journeys, and booking management.',
+            features: ['Travel Booking', 'Package Discovery', 'Premium UI'],
+            thumbnail: safarChaskaThumb,
+            videoUrl: '', // To be updated
+            liveUrl: 'https://safar-chaska.vercel.app/',
+            category: 'Travel & Tourism',
+            color: '#f59e0b'
+        },
+        {
+            id: 2,
             title: 'Therpy-Web Platform',
             description: 'A complete mental health platform with real-time consultation and patient management.',
             features: ['Live Video Chat', 'Mood Tracking', 'Appointment System'],
@@ -24,7 +36,7 @@ export default function VideoShowcase() {
             color: '#00d2ff'
         },
         {
-            id: 2,
+            id: 3,
             title: 'Oasis ERP System',
             description: 'Advanced Educational Resource Planning system with multi-role dashboards.',
             features: ['Fee Management', 'Exam Cycles', 'Student Portals'],
@@ -35,7 +47,7 @@ export default function VideoShowcase() {
             color: '#00ff9d'
         },
         {
-            id: 3,
+            id: 4,
             title: 'JalConnect: Water Systems',
             description: 'Smart water distribution and management system for real-time monitoring of tank levels.',
             features: ['IOT Dashboard', 'Real-time Stats', 'Leak Detection'],
@@ -46,7 +58,7 @@ export default function VideoShowcase() {
             color: '#0ea5e9'
         },
         {
-            id: 4,
+            id: 5,
             title: 'Labour Chowk Admin',
             description: 'Enterprise grade administrative dashboard for managing workforce and attendance tracking.',
             features: ['Workforce Mgmt', 'Job Tracking', 'Analytics'],
@@ -57,7 +69,7 @@ export default function VideoShowcase() {
             color: '#3b82f6'
         },
         {
-            id: 5,
+            id: 6,
             title: 'Fresh Plant Nursery',
             description: 'A modern e-commerce platform for high-quality indoor and outdoor plants.',
             features: ['E-commerce', 'Glassmorphism', 'Product Catalog'],

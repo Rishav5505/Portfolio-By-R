@@ -5,7 +5,14 @@ export default function Portfolio() {
   const portfolioCards = [
     {
       id: 1,
-      title: "Mind Mend: Teletherapy Platform",
+      title: "Safar Chaska: Travel Platform",
+      tags: "React · Tailwind · Booking",
+      description:
+        "Premium Himalayan travel platform featuring handcrafted journeys, adventure packages, and seamless booking integration.",
+    },
+    {
+      id: 2,
+      title: "Therpy-Web: Mental Wellness",
       tags: "MERN Stack · Socket.IO · Jitsi",
       description:
         "A comprehensive teletherapy platform featuring secure authentication, therapy booking, mood tracking, and AI-driven insights.",

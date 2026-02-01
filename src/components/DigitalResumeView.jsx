@@ -25,22 +25,21 @@ const DigitalResumeView = () => {
     ],
     experience: [
       {
-        role: "Full Stack Developer (Scrum Master)",
-        company: "Xcelerate - Live Project | Xebia",
-        period: "Mar 2025 – Present",
+        role: "Project Developer",
+        company: "Safar Chaska (Travel Platform)",
+        period: "2024 – 2025",
         tasks: [
-          "Leading Agile ceremonies and project delivery.",
-          "Developed high-performance survey application using React Native, Node.js, and MongoDB.",
-          "Ensuring sprint goals through CI/CD practices.",
+          "Built a premium Himalayan travel platform with React and Tailwind CSS.",
+          "Implemented handcrafted journey packages and booking integration.",
         ],
       },
       {
-        role: "Full Stack Development Intern",
-        company: "Xebia IT Architects Pvt Ltd",
-        period: "June 2025 – July 2025",
+        role: "Project Developer",
+        company: "Therpy-Web (Mental Wellness)",
+        period: "2024",
         tasks: [
-          "Building and debugging scalable web applications.",
-          "Collaborated with teams to improve application performance using MERN stack.",
+          "Developed a teletherapy platform with real-time consultation.",
+          "Integrated mood tracking and AI-driven insights for mental health support.",
         ],
       },
     ],
@@ -55,7 +54,7 @@ const DigitalResumeView = () => {
   return (
     <div className="bg-slate-900/50 p-8 rounded-xl border border-white/10 text-white max-h-[800px] overflow-y-auto custom-scrollbar">
       {/* Header */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         className="border-b border-cyan-500/30 pb-6 mb-8"
@@ -77,7 +76,7 @@ const DigitalResumeView = () => {
             </h2>
             <div className="space-y-6">
               {data.experience.map((exp, idx) => (
-                <motion.div 
+                <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -105,7 +104,7 @@ const DigitalResumeView = () => {
             </h2>
             <div className="space-y-6">
               {data.education.map((edu, idx) => (
-                <motion.div 
+                <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -135,7 +134,7 @@ const DigitalResumeView = () => {
                   <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest mb-2 mt-4">{category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {skills.map((skill, sidx) => (
-                      <span 
+                      <span
                         key={sidx}
                         className="px-3 py-1 rounded-full bg-slate-800 text-cyan-300 text-xs border border-white/5 hover:border-cyan-500/50 transition-colors"
                       >
@@ -150,21 +149,21 @@ const DigitalResumeView = () => {
 
           {/* Contact / Info */}
           <section className="bg-slate-800/30 p-6 rounded-xl border border-white/5">
-             <h2 className="text-xl font-semibold mb-4">Quick Info</h2>
-             <div className="space-y-3 text-sm text-slate-400">
-                <div className="flex items-center gap-3">
-                   <span className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">📍</span>
-                   <span>Gurugram, Haryana, India</span>
-                </div>
-                <div className="flex items-center gap-3">
-                   <span className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">💻</span>
-                   <span>Full Stack Developer</span>
-                </div>
-                <div className="flex items-center gap-3">
-                   <span className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">⏰</span>
-                   <span>Available for Opportunities</span>
-                </div>
-             </div>
+            <h2 className="text-xl font-semibold mb-4">Quick Info</h2>
+            <div className="space-y-3 text-sm text-slate-400">
+              <div className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">📍</span>
+                <span>Gurugram, Haryana, India</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">💻</span>
+                <span>Full Stack Developer</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">⏰</span>
+                <span>Available for Opportunities</span>
+              </div>
+            </div>
           </section>
         </div>
       </div>

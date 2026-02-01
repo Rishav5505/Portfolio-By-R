@@ -33,9 +33,9 @@ const ScrollShowcase = () => {
                     {/* Section 2: Image Card */}
                     <div className="scroll-item image-item">
                         <div className="image-card">
-                            <img src={img1} alt="Project 1" />
+                            <img src={img1} alt="Safar Chaska" />
                             <div className="card-overlay">
-                                <h3>Full Stack</h3>
+                                <h3>Safar Chaska</h3>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,10 @@ const ScrollShowcase = () => {
                     {/* Section 4: Image Card */}
                     <div className="scroll-item image-item">
                         <div className="image-card">
-                            <img src={img2} alt="Project 2" />
+                            <img src={img2} alt="Therpy-Web" />
+                            <div className="card-overlay">
+                                <h3>Therpy-Web</h3>
+                            </div>
                         </div>
                     </div>
 
@@ -60,7 +63,10 @@ const ScrollShowcase = () => {
                     {/* Section 6: Image Card */}
                     <div className="scroll-item image-item">
                         <div className="image-card">
-                            <img src={img3} alt="Project 3" />
+                            <img src={img3} alt="Oasis ERP" />
+                            <div className="card-overlay">
+                                <h3>Oasis ERP</h3>
+                            </div>
                         </div>
                     </div>
 
@@ -72,7 +78,10 @@ const ScrollShowcase = () => {
                     {/* Section 8: Image Card */}
                     <div className="scroll-item image-item">
                         <div className="image-card">
-                            <img src={img5} alt="Project 5" />
+                            <img src={img5} alt="JalConnect" />
+                            <div className="card-overlay">
+                                <h3>JalConnect</h3>
+                            </div>
                         </div>
                     </div>
 
