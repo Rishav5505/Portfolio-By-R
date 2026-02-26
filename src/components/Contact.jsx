@@ -86,63 +86,19 @@ export default function Contact() {
     setFormStatus(''); // Clear status on input change
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setFormStatus('sending');
 
-    try {
-      const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY;
-
-      if (!BREVO_API_KEY) {
-        throw new Error('Brevo API Key not found. Please check .env file.');
-      }
-
-      const response = await fetch('https://api.brevo.com/v3/smtp/email', {
-        method: 'POST',
-        headers: {
-          'accept': 'application/json',
-          'api-key': BREVO_API_KEY,
-          'content-type': 'application/json'
-        },
-        body: JSON.stringify({
-          sender: { name: formData.name, email: formData.email },
-          to: [{ email: 'rishavkumar33372@gmail.com', name: 'Rishav Kumar' }],
-          subject: `Portfolio Contact: ${formData.subject}`,
-          htmlContent: `
-            <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
-              <h2 style="color: #00ffff;">New Message from Portfolio</h2>
-              <p><strong>Name:</strong> ${formData.name}</p>
-              <p><strong>Email:</strong> ${formData.email}</p>
-              <p><strong>Subject:</strong> ${formData.subject}</p>
-              <hr />
-              <p><strong>Message:</strong></p>
-              <p style="white-space: pre-wrap;">${formData.message}</p>
-            </div>
-          `
-        })
-      });
-
-      if (response.ok) {
-        setFormStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setTimeout(() => setFormStatus(''), 5000);
-      } else {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to send email');
-      }
-    } catch (error) {
-      console.error('Email Error:', error);
-      setFormStatus('error');
-      setFormData(prev => ({ ...prev, lastError: error.message }));
-
-      // Fallback to Google Form after 4 seconds
-      setTimeout(() => {
-        window.open('https://forms.gle/PY15yq5JVvo2TS5H9', '_blank');
-      }, 4000);
-    } finally {
+    // Simple forward to Google Form for now as requested
+    setTimeout(() => {
+      setFormStatus('success');
       setIsSubmitting(false);
-    }
+      window.open('https://forms.gle/PY15yq5JVvo2TS5H9', '_blank');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setFormStatus(''), 3000);
+    }, 1000);
   };
 
   return (
