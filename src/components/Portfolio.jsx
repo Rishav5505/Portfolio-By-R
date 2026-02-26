@@ -179,13 +179,36 @@ export default function Portfolio() {
           {portfolioCards.map((card) => (
             <article
               key={card.id}
-              className="portfolio-card min-w-[320px] glass p-5 rounded-xl border border-white/10 bg-white/5 shadow-lg"
+              className="portfolio-card min-w-[350px] group relative overflow-hidden glass p-8 rounded-3xl border border-white/5 bg-[#0a0c1a]/40 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:border-cyan-500/50"
             >
-              <h3 className="font-semibold text-xl mb-2">{card.title}</h3>
-              <p className="text-cyan-300 text-xs uppercase tracking-wide mb-3">
-                {card.tags}
-              </p>
-              <p className="text-slate-300 text-sm">{card.description}</p>
+              {/* Animated Glow Backlight */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-cyan-500/0 to-cyan-500/0 group-hover:via-cyan-500/5 group-hover:to-cyan-500/10 transition-all duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 group-hover:scale-110 group-hover:bg-cyan-500/20 transition-all duration-500">
+                    <span className="text-2xl">📁</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <div className="w-2 h-2 rounded-full bg-cyan-500/40"></div>
+                    <div className="w-2 h-2 rounded-full bg-cyan-500/10"></div>
+                  </div>
+                </div>
+
+                <h3 className="font-bold text-2xl mb-3 group-hover:text-cyan-400 transition-colors duration-300">{card.title}</h3>
+                <p className="text-cyan-500/80 text-[10px] font-black uppercase tracking-[0.2em] mb-4 bg-cyan-500/5 inline-block px-3 py-1 rounded-full border border-cyan-500/10">
+                  {card.tags}
+                </p>
+                <p className="text-slate-400 text-sm leading-relaxed mb-8">{card.description}</p>
+
+                <div className="flex items-center gap-2 text-xs font-bold text-slate-500 group-hover:text-cyan-400 transition-colors duration-300">
+                  <span>EXPLORE PROJECT</span>
+                  <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
+                </div>
+              </div>
+
+              {/* Decorative Corner */}
+              <div className="absolute -bottom-12 -right-12 w-24 h-24 bg-cyan-500/10 blur-3xl rounded-full group-hover:bg-cyan-500/20 transition-all"></div>
             </article>
           ))}
         </div>

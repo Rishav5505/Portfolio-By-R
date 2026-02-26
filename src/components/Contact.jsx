@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const form = useRef();
@@ -12,12 +11,6 @@ export default function Contact() {
   const [formStatus, setFormStatus] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // EmailJS Configuration
-  // IMPORTANT: Replace these with your actual EmailJS credentials
-  // Get them from: https://www.emailjs.com/
-  const EMAILJS_SERVICE_ID = 'service_oco5t5d'; // Updated from your screenshot
-  const EMAILJS_TEMPLATE_ID = 'template_ku0wvsp'; // Updated from your screenshot
-  const EMAILJS_PUBLIC_KEY = 'Maks5KeRsQ-u9sMfv'; // Updated from your screenshot
 
   const contactInfo = [
     {
@@ -99,29 +92,51 @@ export default function Contact() {
     setFormStatus('sending');
 
     try {
-      // Send email using EmailJS
-      const result = await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        form.current,
-        EMAILJS_PUBLIC_KEY
-      );
+      const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY;
 
-      if (result.text === 'OK') {
+      if (!BREVO_API_KEY) {
+        throw new Error('Brevo API Key not found. Please check .env file.');
+      }
+
+      const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: {
+          'accept': 'application/json',
+          'api-key': BREVO_API_KEY,
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          sender: { name: formData.name, email: formData.email },
+          to: [{ email: 'rishavkumar33372@gmail.com', name: 'Rishav Kumar' }],
+          subject: `Portfolio Contact: ${formData.subject}`,
+          htmlContent: `
+            <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
+              <h2 style="color: #00ffff;">New Message from Portfolio</h2>
+              <p><strong>Name:</strong> ${formData.name}</p>
+              <p><strong>Email:</strong> ${formData.email}</p>
+              <p><strong>Subject:</strong> ${formData.subject}</p>
+              <hr />
+              <p><strong>Message:</strong></p>
+              <p style="white-space: pre-wrap;">${formData.message}</p>
+            </div>
+          `
+        })
+      });
+
+      if (response.ok) {
         setFormStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
-
-        // Optional: Still show Google Form as confirmation
-        setTimeout(() => {
-          setFormStatus('');
-        }, 5000);
+        setTimeout(() => setFormStatus(''), 5000);
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to send email');
       }
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('Email Error:', error);
       setFormStatus('error');
-      setFormData(prev => ({ ...prev, lastError: error.text || error.message || JSON.stringify(error) }));
+      setFormData(prev => ({ ...prev, lastError: error.message }));
 
-      // Fallback to Google Form
+      // Fallback to Google Form after 4 seconds
       setTimeout(() => {
         window.open('https://forms.gle/PY15yq5JVvo2TS5H9', '_blank');
       }, 4000);
@@ -252,11 +267,6 @@ export default function Contact() {
               </div>
             )}
           </form>
-
-          <div className="form-note">
-            <p>⚠️ <strong>Note:</strong> Please configure EmailJS credentials in Contact.jsx to enable direct email sending.</p>
-            <p>Get your free EmailJS account at: <a href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer">emailjs.com</a></p>
-          </div>
         </div>
 
         {/* Social Links */}
