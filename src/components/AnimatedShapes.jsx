@@ -7,7 +7,6 @@ export default function AnimatedShapes() {
         const container = containerRef.current;
         if (!container) return;
 
-        // Create floating shapes
         const shapes = [
             { type: 'circle', size: 80, color: 'cyan', duration: 20 },
             { type: 'square', size: 60, color: 'purple', duration: 25 },
@@ -17,18 +16,23 @@ export default function AnimatedShapes() {
             { type: 'triangle', size: 55, color: 'purple', duration: 24 },
         ];
 
+        // Create unique animation keyframes in a dedicated style element
+        const dynStyle = document.createElement('style');
+        dynStyle.id = 'animated-shapes-style';
+        let keyframesContent = '';
+
         shapes.forEach((shape, index) => {
             const shapeEl = document.createElement('div');
             shapeEl.className = `floating-shape floating-shape-${shape.type}`;
             shapeEl.style.cssText = `
-        position: absolute;
-        width: ${shape.size}px;
-        height: ${shape.size}px;
-        left: ${Math.random() * 100}%;
-        top: ${Math.random() * 100}%;
-        animation: float${index} ${shape.duration}s ease-in-out infinite;
-        opacity: 0.1;
-      `;
+                position: absolute;
+                width: ${shape.size}px;
+                height: ${shape.size}px;
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                animation: floatShape${index} ${shape.duration}s ease-in-out infinite;
+                opacity: 0.1;
+            `;
 
             if (shape.type === 'circle') {
                 shapeEl.style.borderRadius = '50%';
@@ -50,29 +54,30 @@ export default function AnimatedShapes() {
 
             container.appendChild(shapeEl);
 
-            // Create unique animation keyframes
-            const styleSheet = document.styleSheets[0];
-            const keyframes = `
-        @keyframes float${index} {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg) scale(1);
-          }
-          25% {
-            transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(90deg) scale(1.2);
-          }
-          50% {
-            transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(180deg) scale(0.8);
-          }
-          75% {
-            transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(270deg) scale(1.1);
-          }
-        }
-      `;
-            styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+            keyframesContent += `
+                @keyframes floatShape${index} {
+                  0%, 100% {
+                    transform: translate(0, 0) rotate(0deg) scale(1);
+                  }
+                  25% {
+                    transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(90deg) scale(1.2);
+                  }
+                  50% {
+                    transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(180deg) scale(0.8);
+                  }
+                  75% {
+                    transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(270deg) scale(1.1);
+                  }
+                }
+            `;
         });
+
+        dynStyle.innerHTML = keyframesContent;
+        document.head.appendChild(dynStyle);
 
         return () => {
             // Cleanup
+            if (dynStyle) dynStyle.remove();
             while (container.firstChild) {
                 container.removeChild(container.firstChild);
             }
