@@ -4,6 +4,13 @@ import SectionHeader from "./SectionHeader";
 export default function Portfolio() {
   const portfolioCards = [
     {
+      id: 0,
+      title: "HRMS Lite: Workforce Management",
+      tags: "React · Node.js · Payroll",
+      description:
+        "An enterprise-ready Human Resource Management System with automated payroll, attendance tracking, and employee self-service portals.",
+    },
+    {
       id: 1,
       title: "Safar Chaska: Travel Platform",
       tags: "React · Tailwind · Booking",

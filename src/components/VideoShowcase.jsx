@@ -8,11 +8,23 @@ import freshPlantThumb from '../assets/FreshPlant_Thumb.png';
 import jalConnectThumb from '../assets/JalConnect_Thumb.png';
 import labourChowkThumb from '../assets/LabourChowk_Thumb.png';
 import safarChaskaThumb from '../assets/SafarChaska_Thumb.png';
+import hrmsThumb from '../assets/hrms_final.jpg';
 
 export default function VideoShowcase() {
     const [activeVideo, setActiveVideo] = useState(null);
 
     const projects = [
+        {
+            id: 0,
+            title: 'HRMS Lite: Workforce Management',
+            description: 'Comprehensive Human Resource Management System featuring employee onboarding, payroll management, and real-time analytics.',
+            features: ['Employee Dashboards', 'Payroll Logic', 'Department Stats'],
+            thumbnail: hrmsThumb,
+            videoUrl: '', // To be updated
+            liveUrl: 'https://hrm-comapny.vercel.app/',
+            category: 'Full Stack',
+            color: '#06b6d4'
+        },
         {
             id: 1,
             title: 'Safar Chaska: Himalayan Travel',

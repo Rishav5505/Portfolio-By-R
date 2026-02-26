@@ -5,9 +5,18 @@ import img3 from '../assets/portfolioo-img-3.jpg';
 import img4 from '../assets/portfolioo-img-4.jpg';
 import img5 from '../assets/portfolioo-img-5.jpg';
 import img6 from '../assets/portfolioo-img-6.jpg';
+import hrmsThumb from '../assets/hrms_final.jpg';
 
 export default function PortfolioMarquee() {
-  const images = [img1, img2, img3, img4, img5, img6];
+  const images = [
+    img1,
+    img2,
+    hrmsThumb, // HRMS Project
+    img3,
+    img4,
+    img5,
+    img6
+  ];
 
   useEffect(() => {
     const track = document.getElementById('marqueeTrack');

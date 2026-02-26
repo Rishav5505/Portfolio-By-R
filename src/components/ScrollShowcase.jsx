@@ -10,6 +10,7 @@ import img4 from '../assets/portfolioo-img-4.jpg';
 import img5 from '../assets/portfolioo-img-5.jpg';
 import img6 from '../assets/portfolioo-img-6.jpg'; // Using img6 twice if needed or just 5
 import profileImg from '../assets/rishav_profile.jpg';
+import hrmsThumb from '../assets/hrms_final.jpg';
 
 const ScrollShowcase = () => {
     const targetRef = useRef(null);
@@ -36,6 +37,16 @@ const ScrollShowcase = () => {
                             <img src={img1} alt="Safar Chaska" />
                             <div className="card-overlay">
                                 <h3>Safar Chaska</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Section 2.5: HRMS Lite (NEW) */}
+                    <div className="scroll-item image-item">
+                        <div className="image-card">
+                            <img src={hrmsThumb} alt="HRMS Lite" />
+                            <div className="card-overlay">
+                                <h3>HRMS Lite</h3>
                             </div>
                         </div>
                     </div>
