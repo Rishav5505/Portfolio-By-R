@@ -4,6 +4,12 @@ import SectionHeader from "./SectionHeader";
 export default function Portfolio() {
   const portfolioCards = [
     {
+      id: 'wavygo',
+      title: 'WavyGo: Premium Bike Rentals',
+      tags: 'React · Tailwind · Booking',
+      description: 'Premium platform for luxury motorcycle rentals, featuring a sleek mint-green UI, real-time availability, and seamless web booking.',
+    },
+    {
       id: 0,
       title: "HRMS Lite: Workforce Management",
       tags: "React · Node.js · Payroll",

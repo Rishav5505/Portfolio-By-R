@@ -9,11 +9,23 @@ import jalConnectThumb from '../assets/JalConnect_Thumb.png';
 import labourChowkThumb from '../assets/LabourChowk_Thumb.png';
 import safarChaskaThumb from '../assets/SafarChaska_Thumb.png';
 import hrmsThumb from '../assets/hrms_final.jpg';
+import wavyGoThumb from '../assets/wavygo_thumb.png';
 
 export default function VideoShowcase() {
     const [activeVideo, setActiveVideo] = useState(null);
 
     const projects = [
+        {
+            id: 'wavygo',
+            title: 'WavyGo: Premium Bike Rentals',
+            description: 'Experience pure freedom with WavyGo. Premium platform for luxury motorcycle rentals, featuring a sleek mint-green UI and seamless web booking integration.',
+            features: ['Premium Rentals', 'Mint Design UI', 'Live Booking'],
+            thumbnail: wavyGoThumb,
+            videoUrl: '', 
+            liveUrl: 'https://wavy-go.vercel.app/',
+            category: 'Full Stack',
+            color: '#10b981' // Mint Green
+        },
         {
             id: 0,
             title: 'HRMS Lite: Workforce Management',
