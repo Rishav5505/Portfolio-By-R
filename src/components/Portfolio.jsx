@@ -4,6 +4,12 @@ import SectionHeader from "./SectionHeader";
 export default function Portfolio() {
   const portfolioCards = [
     {
+      id: 'cybervigil',
+      title: 'CyberVigil: Security Ecosystem',
+      tags: 'React · Security · UI/UX',
+      description: 'A sleek, modern cybersecurity dashboard featuring high-tech ecosystem interfaces, advanced data visualizations, and live threat web maps.',
+    },
+    {
       id: 'wavygo',
       title: 'WavyGo: Premium Bike Rentals',
       tags: 'React · Tailwind · Booking',

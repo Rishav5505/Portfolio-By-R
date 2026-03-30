@@ -10,11 +10,23 @@ import labourChowkThumb from '../assets/LabourChowk_Thumb.png';
 import safarChaskaThumb from '../assets/SafarChaska_Thumb.png';
 import hrmsThumb from '../assets/hrms_final.jpg';
 import wavyGoThumb from '../assets/wavygo_thumb.png';
+import cyberVigilThumb from '../assets/cybervigil_thumb.png';
 
 export default function VideoShowcase() {
     const [activeVideo, setActiveVideo] = useState(null);
 
     const projects = [
+        {
+            id: 'cybervigil',
+            title: 'CyberVigil: Security Ecosystem',
+            description: 'A sleek, modern cybersecurity dashboard featuring high-tech ecosystem interfaces, advanced data visualizations, and live threat web maps.',
+            features: ['Live Threat Maps', 'Cyber Dashboard', 'Data Visualization'],
+            thumbnail: cyberVigilThumb,
+            videoUrl: '', 
+            liveUrl: 'https://final-year-ten-delta.vercel.app/',
+            category: 'Cyber Security',
+            color: '#03e9f4'
+        },
         {
             id: 'wavygo',
             title: 'WavyGo: Premium Bike Rentals',
