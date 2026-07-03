@@ -7,25 +7,25 @@ export default function Skills() {
             category: 'Frontend Development',
             icon: '🎨',
             color: '#00ffff',
-            skills: ['React', 'React Native', 'Redux', 'Tailwind CSS', 'HTML5/CSS3', 'JavaScript (ES6+)']
+            skills: ['React.js', 'React Native', 'Redux', 'Tailwind CSS', 'HTML5/CSS3', 'JavaScript (ES6+)']
         },
         {
             category: 'Backend & APIs',
             icon: '⚙️',
             color: '#6600ff',
-            skills: ['Node.js', 'Express.js', 'OAuth / JWT', 'RESTful APIs', 'Socket.IO', 'Firebase']
+            skills: ['Node.js', 'Express.js', 'Python', 'OAuth / JWT', 'RESTful APIs', 'Socket.IO']
         },
         {
             category: 'Databases & Cloud',
             icon: '📊',
             color: '#00ff00',
-            skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'AWS (Basics)', 'Cloudinary']
+            skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'AWS', 'Cloudinary']
         },
         {
-            category: 'Agile & DevOps',
+            category: 'Agile, DevOps & QA',
             icon: '🛠️',
             color: '#ff6600',
-            skills: ['Agile / Scrum', 'Git / GitHub', 'CI/CD Pipelines', 'Postman', 'Linux', 'Vercel']
+            skills: ['Agile / Scrum', 'Git / GitHub', 'Docker', 'Benchmarking', 'CI/CD Pipelines', 'Postman', 'Linux']
         }
     ];
 
@@ -39,7 +39,57 @@ export default function Skills() {
                 subtitle="A curated list of technologies and frameworks I use to build scalable digital solutions."
             />
 
-            <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-6 gap-6">
+            {/* Core Highlighted Skills */}
+            <div className="max-w-7xl mx-auto px-4 md:px-8 mb-16 relative z-10">
+                <h3 className="text-sm font-black text-cyan-400 mb-8 uppercase tracking-[0.25em] text-center flex items-center justify-center gap-3">
+                    <span className="h-[2px] w-8 bg-cyan-500/30"></span>
+                    Core Highlighted Expertise
+                    <span className="h-[2px] w-8 bg-cyan-500/30"></span>
+                </h3>
+                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+                    {[
+                        { name: 'AI/LLM', icon: '🧠', color: '#00ffff' },
+                        { name: 'Python', icon: '🐍', color: '#3776ab' },
+                        { name: 'Docker', icon: '🐳', color: '#2496ed' },
+                        { name: 'Git', icon: '🌳', color: '#f05032' },
+                        { name: 'React.js', icon: '⚛️', color: '#61dafb' },
+                        { name: 'Node.js', icon: '🟢', color: '#68a063' },
+                        { name: 'AWS', icon: '☁️', color: '#ff9900' },
+                        { name: 'Benchmarking', icon: '📊', color: '#00e5ff' }
+                    ].map((skill, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 15 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.4, delay: index * 0.05 }}
+                            whileHover={{ 
+                                y: -8,
+                                borderColor: skill.color + '50',
+                                boxShadow: `0px 12px 24px ${skill.color}20`,
+                                backgroundColor: skill.color + '05'
+                            }}
+                            className="glass p-5 rounded-3xl border border-white/5 bg-white/5 transition-all text-center flex flex-col items-center justify-center shadow-lg relative group overflow-hidden"
+                            style={{ cursor: 'none' }}
+                        >
+                            {/* Glowing backlight on hover */}
+                            <div 
+                                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                                style={{ backgroundImage: `linear-gradient(to top, ${skill.color}00, ${skill.color}15)` }}
+                            ></div>
+                            
+                            <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">{skill.icon}</div>
+                            <span 
+                                className="text-xs font-bold text-slate-200 transition-colors uppercase tracking-wider group-hover:text-white"
+                                style={{ textShadow: `0 0 10px ${skill.color}20` }}
+                            >
+                                {skill.name}
+                            </span>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-6 gap-6 relative z-10">
                 {skillCategories.map((category, catIndex) => (
                     <motion.div
                         key={catIndex}

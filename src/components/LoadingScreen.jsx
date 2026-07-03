@@ -32,7 +32,7 @@ export default function LoadingScreen() {
                 </div>
 
                 <h2 className="loading-title">RISHAV KUMAR</h2>
-                <p className="loading-subtitle">Full Stack Developer</p>
+                <p className="loading-subtitle">Full Stack & AI/LLM Systems Engineer</p>
 
                 <div className="loading-bar-container">
                     <div

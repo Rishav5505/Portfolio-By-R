@@ -14,7 +14,7 @@ export default function ResumeDownload() {
     {
       id: "rishav-main",
       name: "FSD Resume",
-      description: "Full Stack & MERN Specialist",
+      description: "Software Engineer & AI/LLM Specialist",
       file: rishavResumePdf,
       fileName: "Rishav_Kumar_FSD.pdf",
       featured: true,

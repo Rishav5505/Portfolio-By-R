@@ -5,35 +5,35 @@ export default function Resume() {
   const resumeCards = [
     {
       id: 1,
-      title: "Education",
-      heading: "B.Tech in Computer Science & Engineering",
-      meta: "K. R. Mangalam University · 2022 – 2026",
+      title: "Experience",
+      heading: "LLM Post-Training Intern",
+      meta: "Ethara.AI · Jan 2026 – Present",
       content:
-        "Specialization in Full Stack Development. Gaining expertise in software architecture, enterprise technologies, and end-to-end application development.",
+        "Worked on post-training evaluation and benchmarking pipelines for Large Language Models across multiple repositories. Built and validated 100+ multi-architecture Docker images for large-scale workflows. Evaluated model performance, golden patches, and dataset quality.",
     },
     {
       id: 2,
-      title: "Secondary Education",
-      heading: "Senior Secondary (PCM)",
-      meta: "Sir Ganesh Dutt Inter Memorial College · 2022",
+      title: "Experience",
+      heading: "Full Stack Developer Intern",
+      meta: "Xcelerate Live Project, Xebia · Mar 2025 – Jun 2025",
       content:
-        "Completed higher secondary education with a focus on Physics, Chemistry, and Mathematics.",
+        "Developed survey application using React Native, Node.js, Express.js, and MongoDB. Worked in Agile environment with sprint planning, collaboration, and code reviews.",
     },
     {
       id: 3,
-      title: "Work Experience",
-      heading: "Full Stack Developer (Scrum Master)",
-      meta: "Xcelerate - Live Project | Xebia · Mar 2025 – Present",
+      title: "Education",
+      heading: "B.Tech in CSE (Full Stack)",
+      meta: "K.R. Mangalam University · 2022 – 2026",
       content:
-        "Leading Agile ceremonies and project delivery. Developed a high-performance survey application using React Native, Node.js, and MongoDB. Ensuring sprint goals through CI/CD practices.",
+        "Specialization in Full Stack Development. Gained expertise in software architecture, enterprise technologies, and end-to-end application development.",
     },
     {
       id: 4,
-      title: "Internship",
-      heading: "Full Stack Development Intern",
-      meta: "Xebia IT Architects Pvt Ltd · June 2025 – July 2025",
+      title: "Projects",
+      heading: "Mind Mend (MERN Stack)",
+      meta: "Teletherapy Platform · 2025 – Present",
       content:
-        "Building and debugging scalable web applications in a professional environment. Collaborated with teams to improve application performance and user experience using MERN stack.",
+        "Built teletherapy platform with authentication, therapy booking, mood tracking, and AI insights. Tech Stack: React.js, Tailwind CSS, Node.js, Express.js, MongoDB, JWT.",
     },
   ];
 

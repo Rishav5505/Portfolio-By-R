@@ -5,19 +5,19 @@ const DigitalResumeView = () => {
   const data = {
     personal: {
       name: "Rishav Kumar",
-      title: "Full Stack & MERN Specialist",
-      email: "rishav@example.com", // Placeholder
-      bio: "Ambitious Computer Science student with a passion for building scalable web applications. Specialized in MERN stack with experience in leading Agile teams as a Scrum Master.",
+      title: "Full Stack Developer · AI & LLM Systems Engineer",
+      email: "rishavkumar33372@gmail.com",
+      bio: "Full Stack Developer with experience in scalable web applications, AI model evaluation, and LLM infrastructure. Skilled in MERN stack, Docker, Python, Git, and Linux, with hands-on experience building benchmark evaluation pipelines and intelligent systems.",
     },
     education: [
       {
-        degree: "B.Tech in Computer Science & Engineering",
-        school: "K. R. Mangalam University",
+        degree: "B.Tech in Computer Science & Engineering (Full Stack Development)",
+        school: "K.R. Mangalam University, Gurugram",
         period: "2022 – 2026",
-        highlights: "Specialization in Full Stack Development. Gaining expertise in software architecture.",
+        highlights: "Specialization in Full Stack Development. Gained expertise in software architecture.",
       },
       {
-        degree: "Senior Secondary (PCM)",
+        degree: "Senior Secondary Education (PCM)",
         school: "Sir Ganesh Dutt Inter Memorial College",
         period: "2022",
         highlights: "Focus on Physics, Chemistry, and Mathematics.",
@@ -25,29 +25,31 @@ const DigitalResumeView = () => {
     ],
     experience: [
       {
-        role: "Project Developer",
-        company: "Safar Chaska (Travel Platform)",
-        period: "2024 – 2025",
+        role: "LLM Post-Training Intern",
+        company: "Ethara.AI",
+        period: "Jan 2026 – Present",
         tasks: [
-          "Built a premium Himalayan travel platform with React and Tailwind CSS.",
-          "Implemented handcrafted journey packages and booking integration.",
-        ],
+          "Worked on post-training evaluation and benchmarking pipelines for Large Language Models across multiple repositories.",
+          "Built and validated 100+ multi-architecture Docker images for large-scale evaluation workflows.",
+          "Evaluated model performance, golden patches, and dataset quality using benchmark validation pipelines."
+        ]
       },
       {
-        role: "Project Developer",
-        company: "Therpy-Web (Mental Wellness)",
-        period: "2024",
+        role: "Full Stack Developer Intern",
+        company: "Xcelerate Live Project, Xebia",
+        period: "Mar 2025 – Jun 2025",
         tasks: [
-          "Developed a teletherapy platform with real-time consultation.",
-          "Integrated mood tracking and AI-driven insights for mental health support.",
-        ],
-      },
+          "Developed survey application using React Native, Node.js, Express.js, and MongoDB.",
+          "Worked in Agile environment with sprint planning, collaboration, and code reviews."
+        ]
+      }
     ],
     skills: {
-      Frontend: ["React", "React Native", "Redux", "Tailwind CSS", "HTML5/CSS3"],
-      Backend: ["Node.js", "Express.js", "OAuth/JWT", "REST APIs"],
+      "Programming Languages": ["JavaScript", "TypeScript", "Java", "Python", "Bash"],
+      Frontend: ["HTML5", "CSS3", "React", "React Native", "Bootstrap", "Tailwind CSS", "Redux"],
+      Backend: ["Node.js", "Express.js", "REST APIs", "OAuth", "JWT"],
       Databases: ["MongoDB", "MySQL"],
-      Tools: ["Agile/Scrum", "Git/GitHub", "Postman", "Linux"],
+      "DevOps / Tools": ["Docker", "Git", "GitHub", "Linux", "CI/CD", "AWS", "Postman", "Figma"],
     },
   };
 
@@ -157,7 +159,7 @@ const DigitalResumeView = () => {
               </div>
               <div className="flex items-center gap-3">
                 <span className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">💻</span>
-                <span>Full Stack Developer</span>
+                <span>Full Stack & AI/LLM Engineer</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">⏰</span>

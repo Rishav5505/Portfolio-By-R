@@ -4,18 +4,18 @@ import { motion } from 'framer-motion';
 const ExperienceTimeline = () => {
     const experiences = [
         {
-            year: '2025',
-            title: 'Full Stack Dev (Scrum Master)',
-            company: 'Xcelerate | Xebia',
-            desc: 'Leading Agile teams and delivering high-performance survey apps.',
-            icon: '🚀'
+            year: 'Jan 2026 – Present',
+            title: 'LLM Post-Training Intern',
+            company: 'Ethara.AI',
+            desc: 'Worked on post-training evaluation and benchmarking pipelines for Large Language Models across multiple repositories. Built and validated 100+ multi-architecture Docker images for large-scale evaluation workflows.',
+            icon: '🤖'
         },
         {
-            year: '2025',
-            title: 'Full Stack Intern',
-            company: 'Xebia IT Architects',
-            desc: 'Professional exposure to MERN stack and scalable system debugging.',
-            icon: '⚙️'
+            year: 'Mar 2025 – Jun 2025',
+            title: 'Full Stack Developer Intern',
+            company: 'Xcelerate Live Project, Xebia',
+            desc: 'Developed survey application using React Native, Node.js, Express.js, and MongoDB. Worked in Agile environment with sprint planning and code reviews.',
+            icon: '🚀'
         },
         {
             year: '2024',

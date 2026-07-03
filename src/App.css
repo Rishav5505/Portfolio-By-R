@@ -1,37 +1,37 @@
-﻿/* ====================================
+/* ====================================
    PORTFOLIO APP GLOBAL STYLES
    ==================================== */
 
 :root {
-  /* Light Theme (Default) */
-  --bg-primary: #c0c0b9;
-  --bg-secondary: #746e6e;
-  --text-dark: #0b0a0a;
-  --text-secondary: #181717;
-  --accent: #00ffff;
-  --accent-secondary: #6600ff;
-  --border-color: rgba(0, 0, 0, 0.08);
-  --dark: #222;
-  --wrapper-bg: #d6fa07;
-  --header-bg: rgba(242, 249, 18, 0.95);
-  --card-bg: rgba(177, 146, 61, 0.95);
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* Light Theme (Premium Sleek Light Mode) */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --text-dark: #0f172a;
+  --text-secondary: #475569;
+  --accent: #06b6d4;
+  --accent-secondary: #6366f1;
+  --border-color: rgba(15, 23, 42, 0.06);
+  --dark: #e2e8f0;
+  --wrapper-bg: #f8fafc;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
 }
 
-/* Dark Theme */
+/* Dark Theme (Premium Deep Cyber Night Mode) */
 html.dark-theme {
-  --bg-primary: #03040c;
-  --bg-secondary: #1d1e26;
-  --text-dark: #ffffff;
-  --text-secondary: #b0b0b0;
-  --accent: #00ffff;
-  --accent-secondary: #6600ff;
-  --border-color: rgba(255, 255, 255, 0.08);
-  --dark: #181414;
-  --wrapper-bg: #1a1f4a;
-  --header-bg: rgba(10, 14, 39, 0.95);
-  --card-bg: rgba(23, 23, 24, 0.95);
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --bg-primary: #05050e;
+  --bg-secondary: #0a0b16;
+  --text-dark: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #00f2fe;
+  --accent-secondary: #7c3aed;
+  --border-color: rgba(255, 255, 255, 0.06);
+  --dark: #0c0d1e;
+  --wrapper-bg: #05050e;
+  --header-bg: rgba(5, 5, 14, 0.85);
+  --card-bg: rgba(10, 11, 22, 0.7);
+  --shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
 }
 
 /* ====================================
@@ -125,9 +125,7 @@ body {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
@@ -186,8 +184,8 @@ button,
 
 /* Sections */
 .section {
-  padding: 40px 0;
-  margin: 20px 0;
+  padding: 80px 0;
+  margin: 40px 0;
 }
 
 /* Remove top spacing for the first section (hero) */

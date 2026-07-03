@@ -112,9 +112,9 @@ export default function ScrollRobot() {
                             >
                                 <span className="text-[10px] text-cyan-400 font-mono whitespace-nowrap">
                                     {scrollDirection === 'down' ? (
-                                        ['npm_run_dev', 'git_push...', 'indexing...', 'fetching_stats'][Math.floor(Date.now() / 1000) % 4]
+                                        ['python_train.py', 'model.evaluate()', 'benchmark_eval', 'curating_datasets'][Math.floor(Date.now() / 1000) % 4]
                                     ) : (
-                                        ['cd_top/..', 'reloading...', 'scroll_up()', 'parsing_header'][Math.floor(Date.now() / 1000) % 4]
+                                        ['import_torch', 'cuda.empty_cache()', 'reloading_weights', 'clear_memory()'][Math.floor(Date.now() / 1000) % 4]
                                     )}
                                 </span>
                             </motion.div>

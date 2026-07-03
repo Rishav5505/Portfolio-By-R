@@ -10,16 +10,11 @@ export default function Hero() {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = [
-    'Aspiring Full Stack Developer',
-    'Mobile App Specialist (React Native)',
-    'Website QA & Testing Engineer',
-    'MERN Stack Specialty',
-    'React Native Developer',
-    'Scrum Master',
-    'Agile Practitioner',
-    'JavaScript / TypeScript Developer',
-    'Node.js Backend Engineer',
-    'UI/UX Designer (Figma)'
+    'Software Engineer',
+    'AI/LLM Engineer',
+    'Full Stack Developer',
+    'Model Evaluation & Benchmarking',
+    'Automation & Scaling Pipelines'
   ];
 
   useEffect(() => {
@@ -86,6 +81,7 @@ export default function Hero() {
         <div className="hero-text">
           <motion.p className="hero-greeting" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>HI THERE!</motion.p>
           <h2 className="hero-title">I'M <span className="glitch-text" data-text="RISHAV KUMAR">RISHAV KUMAR</span></h2>
+          <h3 className="text-xl md:text-2xl font-bold tracking-widest mt-2 mb-4 text-cyan-400 uppercase font-mono">Software Engineer</h3>
           <div className="hero-subtitle mb-6">
             <span className="text-cyan-400 font-mono text-xl">{typedText}</span>
             <span className="typing-cursor">|</span>
@@ -93,7 +89,7 @@ export default function Hero() {
 
           <motion.div className="glass p-6 rounded-2xl border border-white/5 shadow-2xl mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
             <p className="hero-description m-0 text-slate-300 leading-relaxed">
-              Aspiring Full Stack Developer skilled in building scalable applications. Fusing spiritual discipline with modern engineering to create divine digital experiences.
+              Building scalable AI systems and modern web applications.
             </p>
           </motion.div>
 
@@ -129,10 +125,12 @@ export default function Hero() {
           {/* Floating 'Mind knowledge' Tech Stack */}
           {[
             { name: 'React', icon: '⚛️', color: '#61dafb', angle: -20, dist: 220, delay: 0 },
-            { name: 'Java', icon: '☕', color: '#f8981d', angle: 40, dist: 240, delay: 0.8 },
-            { name: 'Node.js', icon: '🟢', color: '#68a063', angle: 100, dist: 230, delay: 1.6 },
-            { name: 'MongoDB', icon: '🍃', color: '#4db33d', angle: 200, dist: 210, delay: 2.4 },
-            { name: 'JavaScript', icon: '🟨', color: '#f7df1e', angle: 280, dist: 250, delay: 3.2 }
+            { name: 'Python', icon: '🐍', color: '#3776ab', angle: 35, dist: 230, delay: 0.85 },
+            { name: 'Docker', icon: '🐳', color: '#2496ed', angle: 90, dist: 240, delay: 1.7 },
+            { name: 'Git', icon: '🌳', color: '#f05032', angle: 145, dist: 220, delay: 2.55 },
+            { name: 'Node.js', icon: '🟢', color: '#68a063', angle: 200, dist: 230, delay: 3.4 },
+            { name: 'AWS', icon: '☁️', color: '#ff9900', angle: 260, dist: 240, delay: 4.25 },
+            { name: 'Benchmarking', icon: '📊', color: '#00ffff', angle: 315, dist: 225, delay: 5.1 }
           ].map((tech, idx) => (
             <motion.div
               key={idx}

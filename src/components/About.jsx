@@ -10,15 +10,15 @@ export default function About() {
       <div className="about-grid">
         <div className="about-summary">
           <h3>I'm Rishav Kumar</h3>
-          <p className="about-role">Full Stack Developer | Mobile App Specialist | Website QA Engineer</p>
+          <p className="about-role">Software Engineer @ Ethara AI | AI/LLM Engineer | Full Stack Developer</p>
           <p>
-            I'm Rishav Kumar, an Aspiring Full Stack Developer skilled in building scalable web and mobile applications using the MERN stack. I'm adept at Agile methodologies, with hands-on experience as a Scrum Master and developer.
+            I am Rishav Kumar, a Software Engineer at Ethara AI with experience in AI/LLM systems and Full Stack Development. I specialize in building scalable web applications, automation pipelines, and AI-driven solutions using technologies like React, Node.js, Python, Docker, and cloud tools.
           </p>
           <p>
-            I have a strong foundation in full-stack development, project leadership, and cross-functional team collaboration. My experience ranges from developing high-performance survey applications with React Native to architecting teletherapy platforms.
+            I have a strong foundation in designing automation pipelines, performing LLM evaluations, benchmarking language models, and developing robust web architectures.
           </p>
           <p>
-            I'm passionate about building robust systems that solve real-world problems, whether it's through decentralized medical records or AI-integrated mental wellness platforms.
+            I'm passionate about building scalable, production-grade applications and AI workflows that solve complex real-world problems and drive digital transformation.
           </p>
         </div>
 
@@ -45,21 +45,21 @@ export default function About() {
       <div className="about-services">
         <h3>What I Do</h3>
         <div className="service">
+          <h4>AI & LLM Engineering</h4>
+          <p>
+            Developing AI-driven solutions, setting up robust evaluation frameworks, curating high-quality datasets, and benchmarking model performances.
+          </p>
+        </div>
+        <div className="service">
           <h4>Full Stack Development</h4>
           <p>
-            Comprehensive web application development using the MERN stack. I handle everything from database schema design and RESTful API development to interactive frontend implementation and deployment.
+            Comprehensive web application development using React, Node.js, and Python. Designing RESTful APIs, modern user interfaces, and optimizing backend systems.
           </p>
         </div>
         <div className="service">
-          <h4>Frontend Engineering</h4>
+          <h4>Automation & Pipelines</h4>
           <p>
-            Creating responsive, high-performance user interfaces with React, Redux, and modern CSS frameworks. Focused on accessibility, speed, and cross-browser compatibility.
-          </p>
-        </div>
-        <div className="service">
-          <h4>Mobile App Development</h4>
-          <p>
-            Designing and developing cross-platform mobile applications using React Native. Focused on delivering native-like performance and smooth user experiences for both iOS and Android.
+            Building end-to-end dataset curation pipelines, model validation pipelines, testing suites, and deploying containerized services with Docker.
           </p>
         </div>
         <div className="service">

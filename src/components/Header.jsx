@@ -8,16 +8,11 @@ export default function Header() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
 
   const roles = [
-    'Aspiring Full Stack Developer',
-    'Mobile App Specialist (React Native)',
-    'Website QA & Testing Engineer',
-    'MERN Stack Specialty',
-    'React Native Developer',
-    'Scrum Master',
-    'Agile Practitioner',
-    'JavaScript / TypeScript Developer',
-    'Node.js Backend Engineer',
-    'UI/UX Designer (Figma)'
+    'Software Engineer',
+    'AI/LLM Engineer',
+    'Full Stack Developer',
+    'Model Evaluation & Benchmarking',
+    'Automation & Scaling Pipelines'
   ];
 
   // Auto-scroll roles
